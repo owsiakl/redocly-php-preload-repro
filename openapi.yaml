@@ -1,0 +1,26 @@
+openapi: 3.1.0
+info:
+  title: Preload repro
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:9
+paths:
+  /pets/{id}:
+    get:
+      operationId: GetPet
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string

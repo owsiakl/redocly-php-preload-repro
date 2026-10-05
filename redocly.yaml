@@ -1,0 +1,7 @@
+apis:
+  repro:
+    root: ./openapi.yaml
+    clientOutput: ./out/client.ts
+    client:
+      generators:
+        - php
